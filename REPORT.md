@@ -41,9 +41,9 @@ Single-stream row (concurrency 1, 20 questions × 5 runs; not on the card): medi
 What this says:
 
 * **It just runs.** No fallback, no environment tricks, coherent output in English and Spanish, 0 truncations, 0 request errors over 2 000 GSM8K generations. The card's Requirements section can list GB10/SM121 with a current vLLM.
-* **Accuracy matches the card**: 97.0 % exact match on the same 200 questions vs 96.5 % on SM120, once answers are extracted robustly (§3). The FP4 path on GB10 costs nothing measurable in accuracy.
+* **Accuracy matches the card**: 97.0 % exact match on the same 200 questions vs 96.5 % on SM120, once answers are extracted robustly (§3). We observed no measurable accuracy regression on this test relative to the published SM120 result.
 * **MTP works at least as well as on SM120**: 66 % acceptance vs 61 %. An earlier pass on trivial prompts had shown ~44 %; that was the prompt set, not the hardware.
-* **Speed is bandwidth-bound.** 16.4 vs 85 tok/s per request is a 5.2× gap on a device with ~6.6× less memory bandwidth than a PRO 6000. Concurrency is nearly free: per-request speed drops only from 18.3 (single) to 16.4 (8 concurrent) while aggregate throughput rises 7× to 118 tok/s — on Spark, batch.
+* **The observed performance gap is consistent with a memory-bandwidth-bound decode workload.** 16.4 vs 85 tok/s per request is a 5.2× gap on a device with ~6.6× less memory bandwidth than a PRO 6000. Concurrency is nearly free: per-request speed drops only from 18.3 (single) to 16.4 (8 concurrent) while aggregate throughput rises 7× to 118 tok/s — on Spark, batch.
 
 ## 2. Swift vs the base model on the same Spark
 
@@ -123,7 +123,7 @@ UkisAI's own extractor may differ in the hedged/rounding cases; that is worth ±
 ## 5. Reproduce
 
 ```bash
-git clone https://github.com/em-xdev/spark-test-swift-qwen3.8-27B && cd swift-spark-benchmark && scripts/prepare-gsm8k.sh
+git clone https://github.com/e-xdev/spark-test-swift-qwen3.8-27B && cd swift-spark-benchmark && scripts/prepare-gsm8k.sh
 cp recipes/*.yaml ~/spark-vllm-docker/recipes/
 tmux new -d -s cluster -x 300 -y 50 -c ~/spark-vllm-docker './run-recipe.sh swift-qwen38-nvfp4 --solo; exec bash'
 LABEL=swift MODEL=ukisai/Swift-Qwen3.8-27B-NVFP4 scripts/eval-swift-quant.sh all
