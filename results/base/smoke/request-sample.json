@@ -1,0 +1,18 @@
+{
+  "model": "unsloth/Qwen3.8-27B-NVFP4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the capital of Australia?"
+    }
+  ],
+  "max_tokens": 8192,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0.0
+}

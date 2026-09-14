@@ -1,0 +1,192 @@
+{
+  "conc8": {
+    "dir": "results/swift/conc8",
+    "n_runs": 5,
+    "model": "ukisai/Swift-Qwen3.8-27B-NVFP4",
+    "label": "swift",
+    "concurrency": 8,
+    "n_per_run": 200,
+    "effort": "template-default",
+    "max_tokens": 8192,
+    "metrics": {
+      "em_pct": {
+        "median": 97.0,
+        "min": 95.0,
+        "max": 98.0,
+        "n": 5
+      },
+      "truncated": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      },
+      "mean_completion_tokens": {
+        "median": 339.5,
+        "min": 298.2,
+        "max": 385.9,
+        "n": 5
+      },
+      "median_decode_tps": {
+        "median": 16.42,
+        "min": 16.28,
+        "max": 16.48,
+        "n": 5
+      },
+      "server_gen_tps_steady_median": {
+        "median": 118.39,
+        "min": 116.78,
+        "max": 121.12,
+        "n": 5
+      },
+      "server_gen_tps_run_aggregate": {
+        "median": 111.76,
+        "min": 111.01,
+        "max": 117.33,
+        "n": 5
+      },
+      "median_latency_s": {
+        "median": 13.71,
+        "min": 13.49,
+        "max": 14.07,
+        "n": 5
+      },
+      "p90_latency_s": {
+        "median": 42.84,
+        "min": 34.94,
+        "max": 44.05,
+        "n": 5
+      },
+      "wall_s": {
+        "median": 598.49,
+        "min": 496.36,
+        "max": 683.31,
+        "n": 5
+      },
+      "median_ttft_s": {
+        "median": 0.602,
+        "min": 0.602,
+        "max": 0.605,
+        "n": 5
+      },
+      "mtp_accept_rate_token_weighted_pct": {
+        "median": 66.03,
+        "min": 65.09,
+        "max": 68.41,
+        "n": 5
+      },
+      "mtp_mean_acceptance_length_median": {
+        "median": 2.981,
+        "min": 2.953,
+        "max": 3.052,
+        "n": 5
+      },
+      "n_errors": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "mtp_per_position_mean": [
+      0.802,
+      0.653,
+      0.534
+    ]
+  },
+  "single": {
+    "dir": "results/swift/single",
+    "n_runs": 5,
+    "model": "ukisai/Swift-Qwen3.8-27B-NVFP4",
+    "label": "swift",
+    "concurrency": 1,
+    "n_per_run": 20,
+    "effort": "template-default",
+    "max_tokens": 8192,
+    "metrics": {
+      "em_pct": {
+        "median": 90.0,
+        "min": 85.0,
+        "max": 95.0,
+        "n": 5
+      },
+      "truncated": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      },
+      "mean_completion_tokens": {
+        "median": 315.8,
+        "min": 275.2,
+        "max": 436.8,
+        "n": 5
+      },
+      "median_decode_tps": {
+        "median": 18.26,
+        "min": 17.8,
+        "max": 18.81,
+        "n": 5
+      },
+      "server_gen_tps_steady_median": {
+        "median": 16.89,
+        "min": 16.18,
+        "max": 17.98,
+        "n": 5
+      },
+      "server_gen_tps_run_aggregate": {
+        "median": 16.28,
+        "min": 16.1,
+        "max": 17.06,
+        "n": 5
+      },
+      "median_latency_s": {
+        "median": 12.9,
+        "min": 10.25,
+        "max": 13.15,
+        "n": 5
+      },
+      "p90_latency_s": {
+        "median": 33.11,
+        "min": 27.39,
+        "max": 63.78,
+        "n": 5
+      },
+      "wall_s": {
+        "median": 375.87,
+        "min": 310.59,
+        "max": 530.57,
+        "n": 5
+      },
+      "median_ttft_s": {
+        "median": 0.37,
+        "min": 0.369,
+        "max": 0.371,
+        "n": 5
+      },
+      "mtp_accept_rate_token_weighted_pct": {
+        "median": 64.35,
+        "min": 62.03,
+        "max": 70.27,
+        "n": 5
+      },
+      "mtp_mean_acceptance_length_median": {
+        "median": 2.931,
+        "min": 2.861,
+        "max": 3.108,
+        "n": 5
+      },
+      "n_errors": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "mtp_per_position_mean": [
+      0.795,
+      0.644,
+      0.524
+    ]
+  }
+}

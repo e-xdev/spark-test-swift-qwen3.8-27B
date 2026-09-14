@@ -1,0 +1,32 @@
+# engine log lines captured between 2026-09-13T23:06:53 and 2026-09-13T23:07:38
+# log-cmd: tmux capture-pane -t cluster -p -J -S -
+(APIServer pid=74) INFO:     127.0.0.1:49390 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=74) INFO:     127.0.0.1:49394 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=74) INFO:     127.0.0.1:49402 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(EngineCore pid=211) WARNING 09-13 21:06:53 [jit_monitor.py:135] Triton kernel JIT compilation during inference: _compute_slot_mapping_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:53 [jit_monitor.py:135] Triton kernel JIT compilation during inference: _copy_page_indices_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:53 [jit_monitor.py:135] Triton kernel JIT compilation during inference: _causal_conv1d_fwd_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:54 [jit_monitor.py:135] Triton kernel JIT compilation during inference: eagle_prepare_next_token_padded_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:54 [jit_monitor.py:135] Triton kernel JIT compilation during inference: eagle_step_slot_mapping_metadata_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:54 [jit_monitor.py:135] Triton kernel JIT compilation during inference: _causal_conv1d_update_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:55 [jit_monitor.py:135] Triton kernel JIT compilation during inference: fused_sigmoid_gating_delta_rule_update_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:55 [jit_monitor.py:135] Triton kernel JIT compilation during inference: expand_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(EngineCore pid=211) WARNING 09-13 21:06:55 [jit_monitor.py:135] Triton kernel JIT compilation during inference: eagle_prepare_inputs_padded_kernel. This causes a latency spike; consider extending warmup to cover this shape/config.
+(APIServer pid=74) INFO 09-13 21:06:56 [loggers.py:273] Engine 000: Avg prompt throughput: 1.1 tokens/s, Avg generation throughput: 0.4 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=74) INFO 09-13 21:06:56 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.00, Accepted throughput: 0.23 tokens/s, Drafted throughput: 0.34 tokens/s, Accepted: 12 tokens, Drafted: 18 tokens, Per-position acceptance rate: 0.833, 0.667, 0.500, Avg Draft acceptance rate: 66.7%
+(APIServer pid=74) INFO:     127.0.0.1:49418 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=74) INFO:     127.0.0.1:57660 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=74) INFO:     127.0.0.1:57684 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=74) INFO 09-13 21:07:06 [loggers.py:273] Engine 000: Avg prompt throughput: 8.2 tokens/s, Avg generation throughput: 25.1 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=74) INFO 09-13 21:07:06 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.27, Accepted throughput: 17.50 tokens/s, Drafted throughput: 23.10 tokens/s, Accepted: 175 tokens, Drafted: 231 tokens, Per-position acceptance rate: 0.870, 0.727, 0.675, Avg Draft acceptance rate: 75.8%
+(APIServer pid=74) INFO:     127.0.0.1:46598 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=74) INFO:     127.0.0.1:46604 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=74) INFO 09-13 21:07:16 [loggers.py:273] Engine 000: Avg prompt throughput: 13.5 tokens/s, Avg generation throughput: 22.6 tokens/s, Running: 1 reqs, Waiting: 0 reqs, GPU KV cache usage: 1.5%, Prefix cache hit rate: 0.0%
+(APIServer pid=74) INFO 09-13 21:07:16 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 3.04, Accepted throughput: 15.10 tokens/s, Drafted throughput: 22.20 tokens/s, Accepted: 151 tokens, Drafted: 222 tokens, Per-position acceptance rate: 0.784, 0.689, 0.568, Avg Draft acceptance rate: 68.0%
+(APIServer pid=74) INFO:     127.0.0.1:37054 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=74) INFO:     127.0.0.1:37068 - "POST /v1/chat/completions HTTP/1.1" 200 OK
+(APIServer pid=74) INFO 09-13 21:07:26 [loggers.py:273] Engine 000: Avg prompt throughput: 7.2 tokens/s, Avg generation throughput: 22.8 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=74) INFO 09-13 21:07:26 [metrics.py:120] SpecDecoding metrics: Mean acceptance length: 2.95, Accepted throughput: 15.00 tokens/s, Drafted throughput: 23.10 tokens/s, Accepted: 150 tokens, Drafted: 231 tokens, Per-position acceptance rate: 0.818, 0.610, 0.519, Avg Draft acceptance rate: 64.9%
+(APIServer pid=74) INFO:     127.0.0.1:46758 - "GET /metrics HTTP/1.1" 200 OK
+(APIServer pid=74) INFO 09-13 21:07:36 [loggers.py:273] Engine 000: Avg prompt throughput: 0.0 tokens/s, Avg generation throughput: 0.0 tokens/s, Running: 0 reqs, Waiting: 0 reqs, GPU KV cache usage: 0.0%, Prefix cache hit rate: 0.0%
+(APIServer pid=74) INFO:     127.0.0.1:53816 - "GET /metrics HTTP/1.1" 200 OK

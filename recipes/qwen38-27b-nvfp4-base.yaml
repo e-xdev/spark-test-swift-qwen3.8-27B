@@ -1,0 +1,39 @@
+# Recipe: base Qwen3.8-27B NVFP4 (unsloth Dynamic) — control for the Swift comparison; identical flags
+# SM121/GB10 NOTE (verified 2026-09-13 on vLLM 0.25.1.dev24+g96bb89286.d20260710, FlashInfer 0.6.15):
+#   this build selects the native FlashInferCutlassNvFp4LinearKernel (sm_121a) and logs
+#   "Unknown vLLM environment variable detected: VLLM_NVFP4_GEMM_BACKEND". The two env flags below
+#   are therefore inert here. They are kept because older images without sm_121a FP4 kernels
+#   reportedly emit garbage ("!!!!!") without a Marlin fallback; harmless on this build.
+recipe_version: "1"
+name: Qwen3.8-27B-NVFP4-base
+description: base Qwen3.8-27B NVFP4 (unsloth) solo on one Spark, MTP on
+
+model: unsloth/Qwen3.8-27B-NVFP4
+
+container: vllm-node
+solo_only: true
+
+defaults:
+  port: 8000
+  host: 0.0.0.0
+  tensor_parallel: 1
+  gpu_memory_utilization: 0.6
+  max_model_len: 262144
+
+env:
+  VLLM_NVFP4_GEMM_BACKEND: marlin
+  VLLM_MARLIN_USE_ATOMIC_ADD: "1"
+
+command: |
+  vllm serve unsloth/Qwen3.8-27B-NVFP4 \
+      --trust-remote-code \
+      --port {port} \
+      --host {host} \
+      --gpu-memory-utilization {gpu_memory_utilization} \
+      -tp {tensor_parallel} \
+      --max-model-len {max_model_len} \
+      --reasoning-parser qwen3 \
+      --enable-auto-tool-choice \
+      --tool-call-parser qwen3_coder \
+      --speculative-config.method mtp \
+      --speculative-config.num_speculative_tokens 3

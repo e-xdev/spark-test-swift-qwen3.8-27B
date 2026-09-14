@@ -1,0 +1,74 @@
+{
+  "started": "2026-09-13T23:51:01",
+  "host": "dgx-spark",
+  "args": {
+    "base_url": "http://localhost:8000/v1",
+    "model": "unsloth/Qwen3.8-27B-NVFP4",
+    "label": "base",
+    "out": "~/swift-spark-benchmark/results/base/conc8",
+    "data": "~/swift-spark-benchmark/data/gsm8k_test.jsonl",
+    "prompts": null,
+    "n": 200,
+    "offset": 0,
+    "concurrency": 8,
+    "runs": 5,
+    "warmup": 8,
+    "max_tokens": 8192,
+    "effort": null,
+    "log_cmd": "tmux capture-pane -t cluster -p -J -S -",
+    "metrics_url": null,
+    "metrics_interval": 10.0,
+    "settle": 12.0,
+    "timeout": 1800.0,
+    "no_grade": false,
+    "selftest": false
+  },
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0
+  },
+  "answer_extraction": "'#### N' > last number in last \\boxed{} > last number in final content; commas/$ stripped; numeric compare",
+  "server_version": {
+    "version": "0.25.1.dev24+g96bb89286.d20260710"
+  },
+  "metrics_url": "http://localhost:8000/metrics",
+  "metrics_available": true,
+  "server_models": {
+    "object": "list",
+    "data": [
+      {
+        "id": "unsloth/Qwen3.8-27B-NVFP4",
+        "object": "model",
+        "created": 1789336261,
+        "owned_by": "vllm",
+        "root": "unsloth/Qwen3.8-27B-NVFP4",
+        "parent": null,
+        "max_model_len": 262144,
+        "permission": [
+          {
+            "id": "modelperm-b764aa3177650efa",
+            "object": "model_permission",
+            "created": 1789336261,
+            "allow_create_engine": false,
+            "allow_sampling": true,
+            "allow_logprobs": true,
+            "allow_search_indices": false,
+            "allow_view": true,
+            "allow_fine_tuning": false,
+            "organization": "*",
+            "group": null,
+            "is_blocking": false
+          }
+        ]
+      }
+    ]
+  },
+  "data_source": "~/swift-spark-benchmark/data/gsm8k_test.jsonl",
+  "n_items": 200,
+  "qid_range": [
+    0,
+    199
+  ]
+}

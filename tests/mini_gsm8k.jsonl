@@ -1,0 +1,14 @@
+{"question": "Tom has 3 apples and buys 4 more. How many apples does he have now? [gold=7]", "answer": "3 + 4 = <<3+4=7>>7 apples.\n#### 7"}
+{"question": "Tom has 4 apples and buys 6 more. How many apples does he have now? [gold=10]", "answer": "4 + 6 = <<4+6=10>>10 apples.\n#### 10"}
+{"question": "Tom has 5 apples and buys 8 more. How many apples does he have now? [gold=13]", "answer": "5 + 8 = <<5+8=13>>13 apples.\n#### 13"}
+{"question": "Tom has 6 apples and buys 10 more. How many apples does he have now? [gold=16]", "answer": "6 + 10 = <<6+10=16>>16 apples.\n#### 16"}
+{"question": "Tom has 7 apples and buys 12 more. How many apples does he have now? [gold=19]", "answer": "7 + 12 = <<7+12=19>>19 apples.\n#### 19"}
+{"question": "Tom has 8 apples and buys 14 more. How many apples does he have now? [gold=22]", "answer": "8 + 14 = <<8+14=22>>22 apples.\n#### 22"}
+{"question": "Tom has 9 apples and buys 16 more. How many apples does he have now? [gold=25]", "answer": "9 + 16 = <<9+16=25>>25 apples.\n#### 25"}
+{"question": "Tom has 10 apples and buys 18 more. How many apples does he have now? [gold=28]", "answer": "10 + 18 = <<10+18=28>>28 apples.\n#### 28"}
+{"question": "Tom has 11 apples and buys 20 more. How many apples does he have now? [gold=31]", "answer": "11 + 20 = <<11+20=31>>31 apples.\n#### 31"}
+{"question": "Tom has 12 apples and buys 22 more. How many apples does he have now? [gold=34]", "answer": "12 + 22 = <<12+22=34>>34 apples.\n#### 34"}
+{"question": "Tom has 13 apples and buys 24 more. How many apples does he have now? [gold=37]", "answer": "13 + 24 = <<13+24=37>>37 apples.\n#### 37"}
+{"question": "Tom has 14 apples and buys 26 more. How many apples does he have now? [gold=40]", "answer": "14 + 26 = <<14+26=40>>40 apples.\n#### 40"}
+{"question": "Tom has 15 apples and buys 28 more. How many apples does he have now? [gold=43]", "answer": "15 + 28 = <<15+28=43>>43 apples.\n#### 43"}
+{"question": "Tom has 16 apples and buys 30 more. How many apples does he have now? [gold=46]", "answer": "16 + 30 = <<16+30=46>>46 apples.\n#### 46"}

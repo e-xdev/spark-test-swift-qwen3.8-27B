@@ -1,0 +1,399 @@
+{
+  "a": {
+    "dir": "results/swift/conc8",
+    "n_runs": 5,
+    "model": "ukisai/Swift-Qwen3.8-27B-NVFP4",
+    "label": "swift",
+    "concurrency": 8,
+    "n_per_run": 200,
+    "effort": "template-default",
+    "max_tokens": 8192,
+    "metrics": {
+      "em_pct": {
+        "median": 97.0,
+        "min": 95.0,
+        "max": 98.0,
+        "n": 5
+      },
+      "truncated": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      },
+      "mean_completion_tokens": {
+        "median": 339.5,
+        "min": 298.2,
+        "max": 385.9,
+        "n": 5
+      },
+      "median_decode_tps": {
+        "median": 16.42,
+        "min": 16.28,
+        "max": 16.48,
+        "n": 5
+      },
+      "server_gen_tps_steady_median": {
+        "median": 118.39,
+        "min": 116.78,
+        "max": 121.12,
+        "n": 5
+      },
+      "server_gen_tps_run_aggregate": {
+        "median": 111.76,
+        "min": 111.01,
+        "max": 117.33,
+        "n": 5
+      },
+      "median_latency_s": {
+        "median": 13.71,
+        "min": 13.49,
+        "max": 14.07,
+        "n": 5
+      },
+      "p90_latency_s": {
+        "median": 42.84,
+        "min": 34.94,
+        "max": 44.05,
+        "n": 5
+      },
+      "wall_s": {
+        "median": 598.49,
+        "min": 496.36,
+        "max": 683.31,
+        "n": 5
+      },
+      "median_ttft_s": {
+        "median": 0.602,
+        "min": 0.602,
+        "max": 0.605,
+        "n": 5
+      },
+      "mtp_accept_rate_token_weighted_pct": {
+        "median": 66.03,
+        "min": 65.09,
+        "max": 68.41,
+        "n": 5
+      },
+      "mtp_mean_acceptance_length_median": {
+        "median": 2.981,
+        "min": 2.953,
+        "max": 3.052,
+        "n": 5
+      },
+      "n_errors": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "mtp_per_position_mean": [
+      0.802,
+      0.653,
+      0.534
+    ]
+  },
+  "b": {
+    "dir": "results/base/conc8",
+    "n_runs": 5,
+    "model": "unsloth/Qwen3.8-27B-NVFP4",
+    "label": "base",
+    "concurrency": 8,
+    "n_per_run": 200,
+    "effort": "template-default",
+    "max_tokens": 8192,
+    "metrics": {
+      "em_pct": {
+        "median": 96.0,
+        "min": 95.0,
+        "max": 97.5,
+        "n": 5
+      },
+      "truncated": {
+        "median": 0,
+        "min": 0,
+        "max": 1,
+        "n": 5
+      },
+      "mean_completion_tokens": {
+        "median": 426.6,
+        "min": 385.2,
+        "max": 471.2,
+        "n": 5
+      },
+      "median_decode_tps": {
+        "median": 20.02,
+        "min": 19.95,
+        "max": 20.14,
+        "n": 5
+      },
+      "server_gen_tps_steady_median": {
+        "median": 143.76,
+        "min": 141.86,
+        "max": 146.07,
+        "n": 5
+      },
+      "server_gen_tps_run_aggregate": {
+        "median": 120.03,
+        "min": 117.59,
+        "max": 138.87,
+        "n": 5
+      },
+      "median_latency_s": {
+        "median": 12.02,
+        "min": 11.76,
+        "max": 12.23,
+        "n": 5
+      },
+      "p90_latency_s": {
+        "median": 41.77,
+        "min": 39.75,
+        "max": 44.37,
+        "n": 5
+      },
+      "wall_s": {
+        "median": 698.59,
+        "min": 542.7,
+        "max": 720.64,
+        "n": 5
+      },
+      "median_ttft_s": {
+        "median": 0.487,
+        "min": 0.486,
+        "max": 0.489,
+        "n": 5
+      },
+      "mtp_accept_rate_token_weighted_pct": {
+        "median": 62.25,
+        "min": 61.81,
+        "max": 63.88,
+        "n": 5
+      },
+      "mtp_mean_acceptance_length_median": {
+        "median": 2.867,
+        "min": 2.854,
+        "max": 2.917,
+        "n": 5
+      },
+      "n_errors": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "mtp_per_position_mean": [
+      0.773,
+      0.614,
+      0.493
+    ]
+  },
+  "single_a": {
+    "dir": "results/swift/single",
+    "n_runs": 5,
+    "model": "ukisai/Swift-Qwen3.8-27B-NVFP4",
+    "label": "swift",
+    "concurrency": 1,
+    "n_per_run": 20,
+    "effort": "template-default",
+    "max_tokens": 8192,
+    "metrics": {
+      "em_pct": {
+        "median": 90.0,
+        "min": 85.0,
+        "max": 95.0,
+        "n": 5
+      },
+      "truncated": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      },
+      "mean_completion_tokens": {
+        "median": 315.8,
+        "min": 275.2,
+        "max": 436.8,
+        "n": 5
+      },
+      "median_decode_tps": {
+        "median": 18.26,
+        "min": 17.8,
+        "max": 18.81,
+        "n": 5
+      },
+      "server_gen_tps_steady_median": {
+        "median": 16.89,
+        "min": 16.18,
+        "max": 17.98,
+        "n": 5
+      },
+      "server_gen_tps_run_aggregate": {
+        "median": 16.28,
+        "min": 16.1,
+        "max": 17.06,
+        "n": 5
+      },
+      "median_latency_s": {
+        "median": 12.9,
+        "min": 10.25,
+        "max": 13.15,
+        "n": 5
+      },
+      "p90_latency_s": {
+        "median": 33.11,
+        "min": 27.39,
+        "max": 63.78,
+        "n": 5
+      },
+      "wall_s": {
+        "median": 375.87,
+        "min": 310.59,
+        "max": 530.57,
+        "n": 5
+      },
+      "median_ttft_s": {
+        "median": 0.37,
+        "min": 0.369,
+        "max": 0.371,
+        "n": 5
+      },
+      "mtp_accept_rate_token_weighted_pct": {
+        "median": 64.35,
+        "min": 62.03,
+        "max": 70.27,
+        "n": 5
+      },
+      "mtp_mean_acceptance_length_median": {
+        "median": 2.931,
+        "min": 2.861,
+        "max": 3.108,
+        "n": 5
+      },
+      "n_errors": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "mtp_per_position_mean": [
+      0.795,
+      0.644,
+      0.524
+    ]
+  },
+  "single_b": {
+    "dir": "results/base/single",
+    "n_runs": 5,
+    "model": "unsloth/Qwen3.8-27B-NVFP4",
+    "label": "base",
+    "concurrency": 1,
+    "n_per_run": 20,
+    "effort": "template-default",
+    "max_tokens": 8192,
+    "metrics": {
+      "em_pct": {
+        "median": 90.0,
+        "min": 90.0,
+        "max": 95.0,
+        "n": 5
+      },
+      "truncated": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      },
+      "mean_completion_tokens": {
+        "median": 470.9,
+        "min": 415.6,
+        "max": 530.9,
+        "n": 5
+      },
+      "median_decode_tps": {
+        "median": 24.54,
+        "min": 23.77,
+        "max": 25.06,
+        "n": 5
+      },
+      "server_gen_tps_steady_median": {
+        "median": 22.48,
+        "min": 21.48,
+        "max": 22.68,
+        "n": 5
+      },
+      "server_gen_tps_run_aggregate": {
+        "median": 21.86,
+        "min": 21.45,
+        "max": 22.23,
+        "n": 5
+      },
+      "median_latency_s": {
+        "median": 10.88,
+        "min": 10.0,
+        "max": 11.51,
+        "n": 5
+      },
+      "p90_latency_s": {
+        "median": 36.48,
+        "min": 32.91,
+        "max": 48.11,
+        "n": 5
+      },
+      "wall_s": {
+        "median": 421.0,
+        "min": 368.22,
+        "max": 483.08,
+        "n": 5
+      },
+      "median_ttft_s": {
+        "median": 0.27,
+        "min": 0.267,
+        "max": 0.288,
+        "n": 5
+      },
+      "mtp_accept_rate_token_weighted_pct": {
+        "median": 62.92,
+        "min": 60.16,
+        "max": 64.39,
+        "n": 5
+      },
+      "mtp_mean_acceptance_length_median": {
+        "median": 2.888,
+        "min": 2.805,
+        "max": 2.932,
+        "n": 5
+      },
+      "n_errors": {
+        "median": 0,
+        "min": 0,
+        "max": 0,
+        "n": 5
+      }
+    },
+    "mtp_per_position_mean": [
+      0.768,
+      0.61,
+      0.496
+    ]
+  },
+  "paired": {
+    "both": 948,
+    "only_a": 16,
+    "only_b": 12,
+    "neither": 24,
+    "paired_instances": 1000,
+    "runs_paired": 5,
+    "questions_a_never_right": [
+      93,
+      119
+    ],
+    "questions_b_never_right": [
+      12,
+      85,
+      119
+    ]
+  }
+}

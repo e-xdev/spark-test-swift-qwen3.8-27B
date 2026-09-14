@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.tgz
+data/gsm8k_test.jsonl        # 4 MB, MIT-licensed, fetched by scripts/prepare-gsm8k.sh; sha256 is committed
+results/**/*.tmp
+.DS_Store

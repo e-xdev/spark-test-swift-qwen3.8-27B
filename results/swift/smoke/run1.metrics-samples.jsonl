@@ -1,0 +1,11 @@
+{"t": 31106.497, "per_pos": {"0": 0.0, "1": 0.0, "2": 0.0}, "drafts": 0.0, "draft_tokens": 0.0, "accepted": 0.0, "running": 0.0, "prompt": 0.0, "gen": 0.0}
+{"t": 31106.505, "per_pos": {"0": 0.0, "1": 0.0, "2": 0.0}, "drafts": 0.0, "draft_tokens": 0.0, "accepted": 0.0, "running": 0.0, "prompt": 0.0, "gen": 0.0}
+{"t": 31116.51, "per_pos": {"0": 0.0, "1": 0.0, "2": 0.0}, "drafts": 0.0, "draft_tokens": 0.0, "accepted": 0.0, "running": 0.0, "prompt": 0.0, "gen": 0.0}
+{"t": 31126.517, "per_pos": {"0": 0.0, "1": 0.0, "2": 0.0}, "drafts": 0.0, "draft_tokens": 0.0, "accepted": 0.0, "running": 0.0, "prompt": 0.0, "gen": 0.0}
+{"t": 31136.526, "per_pos": {"0": 7.0, "1": 6.0, "2": 4.0}, "drafts": 7.0, "draft_tokens": 21.0, "accepted": 17.0, "running": 1.0, "prompt": 59.0, "gen": 25.0}
+{"t": 31146.535, "per_pos": {"0": 50.0, "1": 42.0, "2": 34.0}, "drafts": 64.0, "draft_tokens": 192.0, "accepted": 126.0, "running": 1.0, "prompt": 141.0, "gen": 192.0}
+{"t": 31156.545, "per_pos": {"0": 102.0, "1": 87.0, "2": 72.0}, "drafts": 120.0, "draft_tokens": 360.0, "accepted": 261.0, "running": 1.0, "prompt": 208.0, "gen": 383.0}
+{"t": 31166.553, "per_pos": {"0": 143.0, "1": 116.0, "2": 91.0}, "drafts": 177.0, "draft_tokens": 531.0, "accepted": 350.0, "running": 1.0, "prompt": 276.0, "gen": 528.0}
+{"t": 31176.563, "per_pos": {"0": 188.0, "1": 145.0, "2": 112.0}, "drafts": 233.0, "draft_tokens": 699.0, "accepted": 445.0, "running": 1.0, "prompt": 348.0, "gen": 680.0}
+{"t": 31186.57, "per_pos": {"0": 202.0, "1": 159.0, "2": 124.0}, "drafts": 249.0, "draft_tokens": 747.0, "accepted": 485.0, "running": 0.0, "prompt": 348.0, "gen": 736.0}
+{"t": 31191.182, "per_pos": {"0": 202.0, "1": 159.0, "2": 124.0}, "drafts": 249.0, "draft_tokens": 747.0, "accepted": 485.0, "running": 0.0, "prompt": 348.0, "gen": 736.0}

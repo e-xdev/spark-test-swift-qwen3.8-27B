@@ -1,0 +1,18 @@
+{
+  "model": "unsloth/Qwen3.8-27B-NVFP4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Janet’s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?"
+    }
+  ],
+  "max_tokens": 8192,
+  "stream": true,
+  "stream_options": {
+    "include_usage": true
+  },
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "top_k": 20,
+  "min_p": 0.0
+}

@@ -1,0 +1,225 @@
+
+== preflight  label=swift  model=ukisai/Swift-Qwen3.8-27B-NVFP4 ==
+engine /metrics reachable: 2 of 2 key counters present
+captured 2884 lines from the log pane (tmux capture-pane -t cluster -p -J -S -)
+WARNING: the pane holds no engine throughput lines — is vLLM really logging into 'cluster'?
+-- kernel-selection lines (which GEMM path is actually in use):
+./run-recipe.sh swift-qwen38-nvfp4 --solo
+user@dgx-spark:~/spark-vllm-docker$ ./run-recipe.sh swift-qwen38-nvfp4 --solo
+Recipe: Swift-Qwen3.8-NVFP4
+  UkisAI Swift NVFP4 solo on one Spark, Marlin fallback, MTP on
+(APIServer pid=71) INFO 09-13 18:55:18 [api_utils.py:345]   █▄█▀ █     █     █     █  model   ukisai/Swift-Qwen3.8-27B-NVFP4
+(APIServer pid=71) INFO 09-13 18:55:18 [api_utils.py:273] non-default args: {'model_tag': 'ukisai/Swift-Qwen3.8-27B-NVFP4', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'host': '0.0.0.0', 'model': 'ukisai/Swift-Qwen3.8-27B-NVFP4', 'trust_remote_code': True, 'max_model_len': 262144, 'reasoning_parser': 'qwen3', 'gpu_memory_utilization': 0.6, 'speculative_config': {'method': 'mtp', 'num_speculative_tokens': 3}}
+(APIServer pid=71) WARNING 09-13 18:55:18 [envs.py:2069] Unknown vLLM environment variable detected: VLLM_NVFP4_GEMM_BACKEND
+(EngineCore pid=209) INFO 09-13 18:55:39 [core.py:114] Initializing a V1 LLM engine (v0.25.1.dev24+g96bb89286.d20260710) with config: model='ukisai/Swift-Qwen3.8-27B-NVFP4', speculative_config=SpeculativeConfig(method='mtp', model='ukisai/Swift-Qwen3.8-27B-NVFP4', num_spec_tokens=3), tokenizer='ukisai/Swift-Qwen3.8-27B-NVFP4', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=262144, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=compressed-tensors, quantization_config=None, enforce_eager=False, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='qwen3', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=ukisai/Swift-Qwen3.8-27B-NVFP4, enable_prefix_caching=False, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.VLLM_COMPILE: 3>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['none'], 'ir_enable_torch_wrap': True, 'splitting_ops': ['vllm::unified_attention_with_output', 'vllm::unified_mla_attention_with_output', 'vllm::mamba_mixer2', 'vllm::mamba_mixer', 'vllm::short_conv', 'vllm::linear_attention', 'vllm::plamo2_mamba_mixer', 'vllm::qwen_gdn_attention_core', 'vllm::gdn_attention_core_xpu', 'vllm::olmo_hybrid_gdn_full_forward', 'vllm::kda_attention', 'vllm::sparse_attn_indexer', 'vllm::rocm_aiter_sparse_attn_indexer', 'vllm::deepseek_v4_attention', 'vllm::hpc_rope_norm_forward', 'vllm::unified_kv_cache_update', 'vllm::unified_mla_kv_cache_update'], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [2048], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'size_asserts': False, 'alignment_asserts': False, 'scalar_asserts': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.FULL_AND_PIECEWISE: (2, 1)>, 'cudagraph_num_of_warmups': 1, 'cudagraph_capture_sizes': [1, 2, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 96, 104, 112, 120, 128, 136, 144, 152, 160, 168, 176, 184, 192, 200, 208, 216, 224, 232, 240, 248, 256, 272, 288, 304, 320, 336, 352, 368, 384, 400, 416, 432, 448, 464, 480, 496, 512], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': False, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False}, 'max_cudagraph_capture_size': 512, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['native'], fused_add_rms_norm=['native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=209) INFO 09-13 18:55:54 [gpu_model_runner.py:5219] Starting to load model ukisai/Swift-Qwen3.8-27B-NVFP4...
+(EngineCore pid=209) INFO 09-13 18:55:54 [__init__.py:974] Using FlashInferCutlassNvFp4LinearKernel for NVFP4 GEMM
+preflight OK -> ~/swift-spark-benchmark/results/swift/env.txt
+
+== smoke test (garbage / coherence; single-stream; NOT an accuracy score) ==
+== swift: ukisai/Swift-Qwen3.8-27B-NVFP4 | n=5 conc=1 runs=1 warmup=0 max_tokens=8192 effort=template-default
+-- run 1: measured (5 reqs @ concurrency 1)
+  [run1] 5/5 done, 73s elapsed
+   run 1: EM=None% trunc=0 mean_ctok=147.2 med_decode_tps=18.73 server_steady_tps=15.19 mtp_acc=64.93% MAL=2.948 src=metrics wall=72.68s errors=0
+done -> ~/swift-spark-benchmark/results/swift/smoke  (run `report.py summarize` for median/min/max)
+[q0] ok      ctok=36 | The capital of Australia is **Canberra**.
+[q1] ok      ctok=282 | Let \(c\) be chickens and \(r\) be rabbits.  \[ c + r = 20 \] \[ 2c + 4r = 56 \]  From \(c + r = 20\), \(c = 20 - r\). Substitute:  \[ 2(20 - r) + 4r 
+[q2] ok      ctok=81 | Photosynthesis is how plants make their own food using sunlight. They take in carbon dioxide and water, and use sunlight to turn them into sugar and o
+[q3] ok      ctok=245 | La luz solar, que parece blanca, está compuesta por todos los colores del espectro. Al atravesar la atmósfera, las moléculas de aire dispersan con may
+[q4] ok      ctok=92 | 391
+smoke: 5 prompts, garbage=0, errors=0
+
+== single-stream row: 20 questions x 5 runs @ concurrency 1 (labeled separately from the card's 8-concurrent figure) ==
+== swift: ukisai/Swift-Qwen3.8-27B-NVFP4 | n=20 conc=1 runs=5 warmup=8 max_tokens=8192 effort=template-default
+-- run 1: warmup (8 reqs, unmeasured)
+  [warm1] 8/8 done, 103s elapsed
+-- run 1: measured (20 reqs @ concurrency 1)
+  [run1] 10/20 done, 161s elapsed
+  [run1] 20/20 done, 311s elapsed
+   run 1: EM=90.0% trunc=0 mean_ctok=275.2 med_decode_tps=18.81 server_steady_tps=17.98 mtp_acc=70.27% MAL=3.108 src=metrics wall=310.59s errors=0
+-- run 2: warmup (8 reqs, unmeasured)
+  [warm2] 8/8 done, 88s elapsed
+-- run 2: measured (20 reqs @ concurrency 1)
+  [run2] 10/20 done, 213s elapsed
+  [run2] 20/20 done, 485s elapsed
+   run 2: EM=75.0% trunc=0 mean_ctok=403.2 med_decode_tps=17.8 server_steady_tps=16.43 mtp_acc=62.76% MAL=2.883 src=metrics wall=485.5s errors=0
+-- run 3: warmup (8 reqs, unmeasured)
+  [warm3] 8/8 done, 88s elapsed
+-- run 3: measured (20 reqs @ concurrency 1)
+  [run3] 10/20 done, 187s elapsed
+  [run3] 20/20 done, 531s elapsed
+   run 3: EM=75.0% trunc=0 mean_ctok=436.8 med_decode_tps=18.17 server_steady_tps=16.18 mtp_acc=62.03% MAL=2.861 src=metrics wall=530.57s errors=0
+-- run 4: warmup (8 reqs, unmeasured)
+  [warm4] 8/8 done, 79s elapsed
+-- run 4: measured (20 reqs @ concurrency 1)
+  [run4] 10/20 done, 155s elapsed
+  [run4] 20/20 done, 318s elapsed
+   run 4: EM=85.0% trunc=0 mean_ctok=275.6 med_decode_tps=18.26 server_steady_tps=17.69 mtp_acc=67.75% MAL=3.032 src=metrics wall=317.94s errors=0
+-- run 5: warmup (8 reqs, unmeasured)
+  [warm5] 8/8 done, 98s elapsed
+-- run 5: measured (20 reqs @ concurrency 1)
+  [run5] 10/20 done, 144s elapsed
+  [run5] 20/20 done, 376s elapsed
+   run 5: EM=90.0% trunc=0 mean_ctok=315.8 med_decode_tps=18.37 server_steady_tps=16.89 mtp_acc=64.35% MAL=2.931 src=metrics wall=375.87s errors=0
+done -> ~/swift-spark-benchmark/results/swift/single  (run `report.py summarize` for median/min/max)
+
+== card protocol: GSM8K first 200 x 5 runs @ concurrency 8, max_tokens 8192 ==
+== swift: ukisai/Swift-Qwen3.8-27B-NVFP4 | n=200 conc=8 runs=5 warmup=8 max_tokens=8192 effort=template-default
+-- run 1: warmup (8 reqs, unmeasured)
+  [warm1] 8/8 done, 64s elapsed
+-- run 1: measured (200 reqs @ concurrency 8)
+  [run1] 10/200 done, 26s elapsed
+  [run1] 20/200 done, 50s elapsed
+  [run1] 30/200 done, 72s elapsed
+  [run1] 40/200 done, 108s elapsed
+  [run1] 50/200 done, 132s elapsed
+  [run1] 60/200 done, 157s elapsed
+  [run1] 70/200 done, 177s elapsed
+  [run1] 80/200 done, 197s elapsed
+  [run1] 90/200 done, 217s elapsed
+  [run1] 100/200 done, 244s elapsed
+  [run1] 110/200 done, 271s elapsed
+  [run1] 120/200 done, 305s elapsed
+  [run1] 130/200 done, 327s elapsed
+  [run1] 140/200 done, 359s elapsed
+  [run1] 150/200 done, 391s elapsed
+  [run1] 160/200 done, 418s elapsed
+  [run1] 170/200 done, 443s elapsed
+  [run1] 180/200 done, 497s elapsed
+  [run1] 190/200 done, 527s elapsed
+  [run1] 200/200 done, 551s elapsed
+   run 1: EM=91.5% trunc=0 mean_ctok=326.0 med_decode_tps=16.48 server_steady_tps=119.4 mtp_acc=66.41% MAL=2.992 src=metrics wall=551.16s errors=0
+-- run 2: warmup (8 reqs, unmeasured)
+  [warm2] 8/8 done, 48s elapsed
+-- run 2: measured (200 reqs @ concurrency 8)
+  [run2] 10/200 done, 33s elapsed
+  [run2] 20/200 done, 53s elapsed
+  [run2] 30/200 done, 78s elapsed
+  [run2] 40/200 done, 116s elapsed
+  [run2] 50/200 done, 154s elapsed
+  [run2] 60/200 done, 197s elapsed
+  [run2] 70/200 done, 229s elapsed
+  [run2] 80/200 done, 258s elapsed
+  [run2] 90/200 done, 280s elapsed
+  [run2] 100/200 done, 308s elapsed
+  [run2] 110/200 done, 334s elapsed
+  [run2] 120/200 done, 360s elapsed
+  [run2] 130/200 done, 384s elapsed
+  [run2] 140/200 done, 427s elapsed
+  [run2] 150/200 done, 468s elapsed
+  [run2] 160/200 done, 508s elapsed
+  [run2] 170/200 done, 539s elapsed
+  [run2] 180/200 done, 569s elapsed
+  [run2] 190/200 done, 623s elapsed
+  [run2] 200/200 done, 683s elapsed
+   run 2: EM=93.0% trunc=0 mean_ctok=385.9 med_decode_tps=16.4 server_steady_tps=116.78 mtp_acc=65.09% MAL=2.953 src=metrics wall=683.31s errors=0
+-- run 3: warmup (8 reqs, unmeasured)
+  [warm3] 8/8 done, 41s elapsed
+-- run 3: measured (200 reqs @ concurrency 8)
+  [run3] 10/200 done, 23s elapsed
+  [run3] 20/200 done, 47s elapsed
+  [run3] 30/200 done, 70s elapsed
+  [run3] 40/200 done, 95s elapsed
+  [run3] 50/200 done, 116s elapsed
+  [run3] 60/200 done, 134s elapsed
+  [run3] 70/200 done, 151s elapsed
+  [run3] 80/200 done, 182s elapsed
+  [run3] 90/200 done, 207s elapsed
+  [run3] 100/200 done, 239s elapsed
+  [run3] 110/200 done, 276s elapsed
+  [run3] 120/200 done, 304s elapsed
+  [run3] 130/200 done, 328s elapsed
+  [run3] 140/200 done, 365s elapsed
+  [run3] 150/200 done, 402s elapsed
+  [run3] 160/200 done, 454s elapsed
+  [run3] 170/200 done, 480s elapsed
+  [run3] 180/200 done, 508s elapsed
+  [run3] 190/200 done, 544s elapsed
+  [run3] 200/200 done, 599s elapsed
+   run 3: EM=94.5% trunc=0 mean_ctok=339.5 med_decode_tps=16.42 server_steady_tps=118.39 mtp_acc=66.03% MAL=2.981 src=metrics wall=598.63s errors=0
+-- run 4: warmup (8 reqs, unmeasured)
+  [warm4] 8/8 done, 36s elapsed
+-- run 4: measured (200 reqs @ concurrency 8)
+  [run4] 10/200 done, 24s elapsed
+  [run4] 20/200 done, 56s elapsed
+  [run4] 30/200 done, 80s elapsed
+  [run4] 40/200 done, 107s elapsed
+  [run4] 50/200 done, 135s elapsed
+  [run4] 60/200 done, 164s elapsed
+  [run4] 70/200 done, 199s elapsed
+  [run4] 80/200 done, 215s elapsed
+  [run4] 90/200 done, 237s elapsed
+  [run4] 100/200 done, 283s elapsed
+  [run4] 110/200 done, 312s elapsed
+  [run4] 120/200 done, 333s elapsed
+  [run4] 130/200 done, 357s elapsed
+  [run4] 140/200 done, 381s elapsed
+  [run4] 150/200 done, 414s elapsed
+  [run4] 160/200 done, 453s elapsed
+  [run4] 170/200 done, 478s elapsed
+  [run4] 180/200 done, 510s elapsed
+  [run4] 190/200 done, 558s elapsed
+  [run4] 200/200 done, 598s elapsed
+   run 4: EM=91.5% trunc=0 mean_ctok=341.2 med_decode_tps=16.28 server_steady_tps=118.07 mtp_acc=65.47% MAL=2.964 src=metrics wall=598.49s errors=0
+-- run 5: warmup (8 reqs, unmeasured)
+  [warm5] 8/8 done, 65s elapsed
+-- run 5: measured (200 reqs @ concurrency 8)
+  [run5] 10/200 done, 22s elapsed
+  [run5] 20/200 done, 48s elapsed
+  [run5] 30/200 done, 70s elapsed
+  [run5] 40/200 done, 88s elapsed
+  [run5] 50/200 done, 117s elapsed
+  [run5] 60/200 done, 138s elapsed
+  [run5] 70/200 done, 161s elapsed
+  [run5] 80/200 done, 182s elapsed
+  [run5] 90/200 done, 211s elapsed
+  [run5] 100/200 done, 242s elapsed
+  [run5] 110/200 done, 266s elapsed
+  [run5] 120/200 done, 286s elapsed
+  [run5] 130/200 done, 305s elapsed
+  [run5] 140/200 done, 325s elapsed
+  [run5] 150/200 done, 355s elapsed
+  [run5] 160/200 done, 381s elapsed
+  [run5] 170/200 done, 411s elapsed
+  [run5] 180/200 done, 435s elapsed
+  [run5] 190/200 done, 476s elapsed
+  [run5] 200/200 done, 496s elapsed
+   run 5: EM=93.5% trunc=0 mean_ctok=298.2 med_decode_tps=16.46 server_steady_tps=121.12 mtp_acc=68.41% MAL=3.052 src=metrics wall=496.36s errors=0
+done -> ~/swift-spark-benchmark/results/swift/conc8  (run `report.py summarize` for median/min/max)
+
+== report ==
+-> ~/swift-spark-benchmark/results/swift/summary.md, summary.json
+### swift — `ukisai/Swift-Qwen3.8-27B-NVFP4` — conc8: 5 runs × 200 requests @ concurrency 8, max_tokens 8192, effort template-default
+
+| Metric | median (min–max) |
+|---|---|
+| GSM8K exact match, % | 93.0 (91.5–94.5) |
+| Truncated at max_tokens (count) | 0 (0–0) |
+| Mean completion tokens (reasoning + answer) | 340 (298–386) |
+| Median tok/s per request, decode phase | 16.4 (16.3–16.5) |
+| Engine aggregate generation tok/s, steady state (/metrics, running >= concurrency) | 118.4 (116.8–121.1) |
+| Engine aggregate generation tok/s over the whole run (incl. ramp/tail) | 111.8 (111.0–117.3) |
+| Median time-to-final-answer per question, s | 13.7 (13.5–14.1) |
+| Median TTFT, s | 0.60 (0.60–0.60) |
+| MTP draft-token acceptance, % (engine counters, token-weighted) | 66.0 (65.1–68.4) |
+| MTP mean acceptance length | 2.98 (2.95–3.05) |
+| Request errors (count) | 0 (0–0) |
+| MTP per-position acceptance (mean) | 0.802, 0.653, 0.534 |
+
+### swift — `ukisai/Swift-Qwen3.8-27B-NVFP4` — single: 5 runs × 20 requests @ concurrency 1, max_tokens 8192, effort template-default
+
+| Metric | median (min–max) |
+|---|---|
+| GSM8K exact match, % | 85.0 (75.0–90.0) |
+| Truncated at max_tokens (count) | 0 (0–0) |
+| Mean completion tokens (reasoning + answer) | 316 (275–437) |
+| Median tok/s per request, decode phase | 18.3 (17.8–18.8) |
+| Engine aggregate generation tok/s, steady state (/metrics, running >= concurrency) | 16.9 (16.2–18.0) |
+| Engine aggregate generation tok/s over the whole run (incl. ramp/tail) | 16.3 (16.1–17.1) |
+| Median time-to-final-answer per question, s | 12.9 (10.2–13.2) |
+| Median TTFT, s | 0.37 (0.37–0.37) |
+| MTP draft-token acceptance, % (engine counters, token-weighted) | 64.3 (62.0–70.3) |
+| MTP mean acceptance length | 2.93 (2.86–3.11) |
+| Request errors (count) | 0 (0–0) |
+| MTP per-position acceptance (mean) | 0.795, 0.644, 0.524 |
+
