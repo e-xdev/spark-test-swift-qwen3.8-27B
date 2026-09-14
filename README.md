@@ -74,7 +74,7 @@ results/<label>/{smoke,single,conc8}/  # per-run JSONL (every output), summaries
 ## One-time setup (on the DGX Spark)
 
 ```bash
-git clone https://github.com/em-xdev/spark-test-swift-qwen3.8-27B ~/spark-test-swift-qwen3.8-27B && cd ~/spark-test-swift-qwen3.8-27B
+git clone https://github.com/e-xdev/spark-test-swift-qwen3.8-27B ~/spark-test-swift-qwen3.8-27B && cd ~/spark-test-swift-qwen3.8-27B
 python3 scripts/gsm8k-bench.py --selftest          # parsers OK?
 tests/run-mock-test.sh                             # whole pipeline OK? (no GPU needed, ~1 min)
 scripts/prepare-gsm8k.sh                           # data/gsm8k_test.jsonl (1319 rows) + sha256
