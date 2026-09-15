@@ -7,6 +7,11 @@ UkisAI's RTX PRO 6000 (SM120) column — plus the same protocol run on the base
 `unsloth/Qwen3.8-27B-NVFP4` on the same box, so Swift's token savings can be read as
 time-to-answer on the same hardware.
 
+> **Revision note:** These results were measured with
+> `ukisai/Swift-Qwen3.8-27B-NVFP4@c282aa2636bd4f7efbbced64b55271d62b326f9b`.
+> Hugging Face `main` was updated on September 16, 2026 to a newer ModelOpt
+> mixed NVFP4/FP8 checkpoint. See `REPORT.md` for details.
+
 **Results: see [REPORT.md](REPORT.md).** Headline, 8 concurrent, GSM8K-200 × 5 runs, medians:
 
 | | Swift-NVFP4 — DGX Spark (this repo) | Swift-NVFP4 — RTX PRO 6000 (card) | base Qwen3.8-27B-NVFP4 (unsloth) — same Spark |
