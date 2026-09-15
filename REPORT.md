@@ -5,6 +5,12 @@
 whose numbers were taken on an RTX PRO 6000 Blackwell (SM120). Scripts, recipes, raw outputs and
 engine-counter snapshots for every run are in this repository.*
 
+
+> **Model revision tested:** `c282aa2636bd4f7efbbced64b55271d62b326f9b`  
+> On September 16, 2026, the Hugging Face `main` revision was updated to a new
+> ModelOpt mixed NVFP4/FP8 checkpoint. The results in this report refer to the
+> preceding `compressed-tensors` checkpoint.
+
 ## Setup
 
 | | |
@@ -17,6 +23,7 @@ engine-counter snapshots for every run are in this repository.*
 | Runs | 5 measured runs per configuration, each preceded by 8 unmeasured warm-up requests; cells are **median (min–max)** over the 5 runs |
 | Speed source | engine counters from vLLM `/metrics`, sampled every 10 s: aggregate = Δ`generation_tokens_total`; steady state = windows with `num_requests_running ≥ concurrency`; MTP = Δaccepted / Δdrafted. Per-request tok/s = client-side decode phase (first → last streamed token, TTFT excluded) |
 | Grading | extraction rule v3 (README) applied identically to both models by `scripts/regrade.py`; residual misses reviewed by hand (§3) |
+| Model revision | `c282aa2636bd4f7efbbced64b55271d62b326f9b` (`compressed-tensors` checkpoint, before the September 16 ModelOpt rebuild) |
 
 ## 1. Swift-NVFP4: DGX Spark next to the card's SM120 column
 
